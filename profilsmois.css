@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+}
+
+.header img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.header nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #f90;
+}
+
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: rgb(66 66 66);
+  outline: 3px rgb(66 66 66) solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #F48E00;
+}
+
+.button:hover svg path:nth-child(1) {
+  fill: #FF9700;
+}
+
+.button:hover svg path:nth-child(2) {
+  fill: #F48E00;
+}
+
+.button:hover svg path:nth-child(3) {
+  fill: #FF9800;
+}
+
+
+
+    <style>
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background-color: #FF9800;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #F48E00;
+        }
+
+        .button svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .button .text {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    </style>

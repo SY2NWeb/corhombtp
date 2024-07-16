@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corhom - Cabinet de recrutement</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Corhom Logo">
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="offres_demploi.html">Offres d'emploi</a>
+            <a href="cv.html">Dépôt CV</a>
+            <a href="cabinet.html">Notre cabinet</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="candidat.html">Candidat</a>
+            <a href="lesplus.html">Les +</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div id="dev-link" class="contact-button" onclick="openModal()">Dev by Synnheal | Contact Me</div>
+    </div>
+    <div class="banner">
+        <img src="main.png" alt="Main">
+        <div class="banner-text">
+            <h1>Cabinet de recrutement</h1>
+            <p>Dijon - Lyon</p>
+            <button class="btn-orange" id="cabinet-btn">Notre Cabinet de recrutement</button>
+        </div>
+    </div>
+  
+<br> 
+	<br>
+	<br>
+
+
+  <div class="main-content">
+        <div class="card-container">
+            <div class="card">
+                <div class="content">
+                    <div class="front">
+                        <div class="front-content">
+                            <img id="fernandes-img" src="icon-entreprise.png" alt="Entreprise" />
+                            <strong>ENTREPRISE</strong>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <strong class="title">RECRUTEMENT</strong>
+                            <a href="entreprise.html#methodologie">Notre méthodologie</a>
+                            <a href="entreprise.html#recrutements">Nos recrutements par opportunité</a>
+                            <strong class="title">ACCOMPAGNEMENT RH</strong>
+                            <a href="entreprise.html#bilan">Bilan pro / évaluation de potentiels internes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="front">
+                        <div class="front-content">
+                            <img src="icon-candidat.png" alt="Candidat" />
+                            <strong>CANDIDAT</strong>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <strong class="title">CANDIDAT</strong>
+                            <a href="#" class="orange-text" id="offres-emploi-link">Offres d'emploi</a>
+                            <a href="#" class="orange-text" id="candidature-spontanee-link">Candidature spontanée</a>
+                            <strong class="title">ACCOMPAGNEMENT</strong>
+                            <a href="#" class="orange-text" id="bilan-competences-link">Bilan de compétences</a>
+                            <a href="#" class="orange-text" id="accompagnement-recherche-emploi-link">Accompagnement à la recherche d'emploi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <div class="front">
+                        <div class="front-content">
+                            <img src="icon-collegien.png" alt="Les +" />
+                            <strong>LES +</strong>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <strong class="title">Les Plus</strong>
+                            <a href="#" id="orientation-scolaire-link">Aide à l'orientation scolaire</a>
+                            <a href="#" id="profils-mois-link">Les profils du mois</a>
+                            <a href="http://www.corhombtp.com/nos_references.php" id="nos-references-link">Nos références</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-section">
+            <div class="text-box">
+                <h2>Nos offres d'emploi</h2>
+                <p>Consultez toutes nos offres disponibles rapidement en sélectionnant les critères qui vous correspondent et postulez en ligne. Votre candidature sera étudiée dans les meilleurs délais.</p>
+                <button class="btn-orange" id="offres-emploi-btn">Consultez nos offres d'emploi</button>
+            </div>
+            <div class="text-box">
+                <h2>Votre CV</h2>
+                <p>Déposez votre CV rapidement ! Notre équipe en fera une analyse détaillée.</p>
+                <button class="btn-orange" id="depot-cv-btn">Déposez votre CV</button>
+            </div>
+            <div class="text-box">
+                <h2>Notre cabinet</h2>
+                <p>Notre équipe de consultants, experts issus du BTP (20 ans de conseil auprès des acteurs de la construction), vous propose ses services. Découvrez-les !</p>
+                <button class="btn-orange" id="cabinet-text-btn">Notre cabinet</button>
+            </div>
+        </div>
+    </div>
+	
+	<br> 
+	<br>
+	<br>
+    <footer class="bg-gray-100 py-6">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex flex-col md:flex-row">
+                <div class="flex items-center mb-4 md:mb-0 md:flex-col md:items-start">
+                    <div class="flex items-center">
+                        <img src="adresse.png" alt="Adresse" class="w-6 h-6 mr-2">
+                        <p>6 rue St John Perse - Immeuble ISIS<br>21000 Dijon, France</p>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <img src="tel.png" alt="Téléphone" class="w-6 h-6 mr-2">
+                        <p>03 80 53 19 14</p>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4 md:mb-0 md:ml-8 md:flex-col md:items-start">
+                    <div class="flex items-center">
+                        <img src="adresse.png" alt="Adresse" class="w-6 h-6 mr-2">
+                        <p>58 Chemin de Mornata, Carrara<br>69570 Dardilly, France</p>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <img src="tel.png" alt="Téléphone" class="w-6 h-6 mr-2">
+                        <p>04 78 35 02 62</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/corhom/" target="_blank" class="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.1em" viewBox="0 0 448 512" fill="currentColor" class="w-5 h-5">
+                        <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/corhom" target="_blank" class="bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.1em" viewBox="0 0 512 512" fill="currentColor" class="w-5 h-5">
+                        <path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="w-64 rounded-lg border-2 border-orange-500 bg-white p-4 text-center shadow-lg">
+                    <figure class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-500">
+                        <img id="profile-img" src="path/to/blue-guy.png" alt="Profile Image">
+                        <figcaption class="sr-only">Fernandes Nathan, Web Developer</figcaption>
+                    </figure>
+                    <h2 class="mt-4 text-x1 font-bold text-indigo-600">Fernandes Nathan</h2>
+                    <p class="mb-4 text-gray-600">Web Developer</p>
+                    <div class="flex flex-col items-center justify-center">
+                        <a href="mailto:sy2nweb@gmail.com" class="rounded-full bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 mb-2">Contact sy2nweb@gmail.com</a>
+                        <a href="https://sy2nweb.github.io/SY2Nweb/" class="btn-orange">Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Open the modal
+        function openModal() {
+            modal.style.display = "flex";
+        }
+
+        // Close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal when clicking outside of the modal content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Change image source on click
+        document.getElementById('dev-link').addEventListener('click', function() {
+            document.getElementById('profile-img').src = 'S2YN-Web.png';
+        });
+
+        // Redirect to cabinet.html on button click
+        document.getElementById('cabinet-btn').addEventListener('click', function() {
+            window.location.href = 'cabinet.html';
+        });
+
+        // Redirect to offres_demploi.html on click
+        document.getElementById('offres-emploi-link').addEventListener('click', function() {
+            window.location.href = 'offres_demploi.html';
+        });
+
+        // Redirect to cv.html on click
+        document.getElementById('candidature-spontanee-link').addEventListener('click', function() {
+            window.location.href = 'cv.html';
+        });
+
+        // Redirect to contact.html on click
+        document.getElementById('bilan-competences-link').addEventListener('click', function() {
+            window.location.href = 'contact.html';
+        });
+
+        // Redirect to contact.html on click
+        document.getElementById('accompagnement-recherche-emploi-link').addEventListener('click', function() {
+            window.location.href = 'contact.html';
+        });
+
+        // Redirect to lesplus.html on click
+        document.getElementById('orientation-scolaire-link').addEventListener('click', function() {
+            window.location.href = 'lesplus.html';
+        });
+
+        // Redirect to profilsmois.html on click
+        document.getElementById('profils-mois-link').addEventListener('click', function() {
+            window.location.href = 'profilsmois.html';
+        });
+
+        // Redirect to http://www.corhombtp.com/nos_references.php on click
+        document.getElementById('nos-references-link').addEventListener('click', function() {
+            window.location.href = 'http://www.corhombtp.com/nos_references.php';
+        });
+
+        // Additional redirects for buttons
+        document.getElementById('offres-emploi-btn').addEventListener('click', function() {
+            window.location.href = 'offres_demploi.html';
+        });
+
+        document.getElementById('depot-cv-btn').addEventListener('click', function() {
+            window.location.href = 'cv.html';
+        });
+
+        document.getElementById('cabinet-text-btn').addEventListener('click', function() {
+            window.location.href = 'cabinet.html';
+        });
+    </script>
+</body>
+</html>

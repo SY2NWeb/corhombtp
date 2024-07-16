@@ -1,0 +1,157 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-y: auto; /* Add this if the content is too long */
+}
+
+h2 {
+  text-align: center;
+  color: #ff6600;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.checkbox-wrapper-37 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-wrapper-37 input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-wrapper-37 .terms-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-wrapper-37 .checkbox-svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.checkbox-wrapper-37 .checkbox-box {
+  fill: #fff;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+.checkbox-wrapper-37 .checkbox-tick {
+  stroke: #ff6600;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  transition: stroke-dashoffset 0.3s;
+}
+
+.checkbox-wrapper-37 input[type="checkbox"]:checked + .terms-label .checkbox-box {
+  stroke: #ff6600;
+}
+
+.checkbox-wrapper-37 input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-37 .label-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #e65c00;
+}
+
+.header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  position: relative;
+  z-index: 10; /* Ensure header is on top */
+}
+
+.header img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+.header nav {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #555;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  color: #ff6600;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 160px); /* Adjust height according to the header and footer */
+}
+
+footer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #eee;
+}

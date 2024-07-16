@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offres d'emploi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        .dropdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        select {
+            color: #FF9966; /* Hex code for the desired orange color */
+        }
+        select option {
+            color: #FF9966; /* Hex code for the desired orange color */
+        }
+        .btn-orange {
+            --clr-font-main: hsla(0 0% 20% / 100);
+            --btn-bg-1: #FF9966;
+            --btn-bg-2: #FF9966;
+            --btn-bg-color: #FFFFFF;
+            --radii: 0.5em;
+            cursor: pointer;
+            padding: 0.9em 1.4em;
+            min-width: 120px;
+            min-height: 44px;
+            font-size: 1rem;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            font-weight: 500;
+            transition: 0.8s;
+            background-size: 280% auto;
+            background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+            border: none;
+            border-radius: var(--radii);
+            color: var(--btn-bg-color);
+            box-shadow: 0px 0px 20px rgba(255, 184, 71, 0.5), 0px 5px 5px -1px rgba(233, 125, 58, 0.25), inset 4px 4px 8px rgba(255, 230, 175, 0.5), inset -4px -4px 8px rgba(216, 95, 19, 0.35);
+        }
+
+        .btn-orange:hover {
+            background-position: right top;
+        }
+
+        .btn-orange:is(:focus, :focus-visible, :active) {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .btn-orange {
+                transition: linear;
+            }
+        }
+        .footer-link {
+            color: #555;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-link:hover {
+            color: #FF9966; /* Hex code for the desired orange color */
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="header text-center py-4 bg-white shadow">
+        <img src="logo.png" alt="Corhom Logo" class="mx-auto mb-4">
+        <nav>
+            <a href="index.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Accueil</a>
+            <a href="offres_demploi.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Offres d'emploi</a>
+            <a href="cv.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Dépôt CV</a>
+            <a href="cabinet.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Notre cabinet</a>
+            <a href="entreprise.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Entreprise</a>
+            <a href="candidat.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Candidat</a>
+            <a href="lesplus.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Les +</a>
+            <a href="contact.html" class="mx-2 text-gray-700 hover:text-[#FF9966]">Contact</a>
+        </nav>
+    
+	</div>
+
+    <div class="container mx-auto mt-10 text-center">
+        <h1 class="text-3xl text-[#FF9966] mb-5">Nos offres d'emploi</h1>
+        <div class="dropdown-container">
+            <!-- Dropdown for departments -->
+            <div class="relative group rounded-lg w-64 bg-gray-50 overflow-hidden before:absolute before:w-12 before:h-12 before:content-[''] before:right-0 before:bg-violet-500 before:rounded-full before:blur-lg before:[box-shadow:-60px_20px_10px_10px_#F9B0B9]">
+                <svg y="0" xmlns="http://www.w3.org/2000/svg" x="0" width="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" height="100" class="w-8 h-8 absolute right-0 -rotate-45 stroke-pink-300 top-1.5 group-hover:rotate-0 duration-300">
+                    <path stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z" class="svg-stroke-primary"></path>
+                </svg>
+                <select class="appearance-none relative bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 text-sm font-bold rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5">
+                    <option>Toute La France</option>
+					<option>01 Ain</option>
+                    <option>02 Aisne</option>
+                    <option>03 Allier</option>
+                    <option>04 Alpes-de-Haute-Provence</option>
+                    <option>05 Hautes-Alpes</option>
+                    <option>06 Alpes-Maritimes</option>
+                    <option>07 Ardèche</option>
+                    <option>08 Ardennes</option>
+                    <option>09 Ariège</option>
+                    <option>10 Aube</option>
+                    <option>11 Aude</option>
+                    <option>12 Aveyron</option>
+                    <option>13 Bouches-du-Rhône</option>
+                    <option>14 Calvados</option>
+                    <option>15 Cantal</option>
+                    <option>16 Charente</option>
+                    <option>17 Charente-Maritime</option>
+                    <option>18 Cher</option>
+                    <option>19 Corrèze</option>
+                    <option>2A Corse-du-Sud</option>
+                    <option>2B Haute-Corse</option>
+                    <option>21 Côte-d'Or</option>
+                    <option>22 Côtes-d'Armor</option>
+                    <option>23 Creuse</option>
+                    <option>24 Dordogne</option>
+                    <option>25 Doubs</option>
+                    <option>26 Drôme</option>
+                    <option>27 Eure</option>
+                    <option>28 Eure-et-Loir</option>
+                    <option>29 Finistère</option>
+                    <option>30 Gard</option>
+                    <option>31 Haute-Garonne</option>
+                    <option>32 Gers</option>
+                    <option>33 Gironde</option>
+                    <option>34 Hérault</option>
+                    <option>35 Ille-et-Vilaine</option>
+                    <option>36 Indre</option>
+                    <option>37 Indre-et-Loire</option>
+                    <option>38 Isère</option>
+                    <option>39 Jura</option>
+                    <option>40 Landes</option>
+                    <option>41 Loir-et-Cher</option>
+                    <option>42 Loire</option>
+                    <option>43 Haute-Loire</option>
+                    <option>44 Loire-Atlantique</option>
+                    <option>45 Loiret</option>
+                    <option>46 Lot</option>
+                    <option>47 Lot-et-Garonne</option>
+                    <option>48 Lozère</option>
+                    <option>49 Maine-et-Loire</option>
+                    <option>50 Manche</option>
+                    <option>51 Marne</option>
+                    <option>52 Haute-Marne</option>
+                    <option>53 Mayenne</option>
+                    <option>54 Meurthe-et-Moselle</option>
+                    <option>55 Meuse</option>
+                    <option>56 Morbihan</option>
+                    <option>57 Moselle</option>
+                    <option>58 Nièvre</option>
+                    <option>59 Nord</option>
+                    <option>60 Oise</option>
+                    <option>61 Orne</option>
+                    <option>62 Pas-de-Calais</option>
+                    <option>63 Puy-de-Dôme</option>
+                    <option>64 Pyrénées-Atlantiques</option>
+                    <option>65 Hautes-Pyrénées</option>
+                    <option>66 Pyrénées-Orientales</option>
+                    <option>67 Bas-Rhin</option>
+                    <option>68 Haut-Rhin</option>
+                    <option>69 Rhône</option>
+                    <option>70 Haute-Saône</option>
+                    <option>71 Saône-et-Loire</option>
+                    <option>72 Sarthe</option>
+                    <option>73 Savoie</option>
+                    <option>74 Haute-Savoie</option>
+                    <option>75 Paris</option>
+                    <option>76 Seine-Maritime</option>
+                    <option>77 Seine-et-Marne</option>
+                    <option>78 Yvelines</option>
+                    <option>79 Deux-Sèvres</option>
+                    <option>80 Somme</option>
+                    <option>81 Tarn</option>
+                    <option>82 Tarn-et-Garonne</option>
+                    <option>83 Var</option>
+                    <option>84 Vaucluse</option>
+                    <option>85 Vendée</option>
+                    <option>86 Vienne</option>
+                    <option>87 Haute-Vienne</option>
+                    <option>88 Vosges</option>
+                    <option>89 Yonne</option>
+                    <option>90 Territoire de Belfort</option>
+                    <option>91 Essonne</option>
+                    <option>92 Hauts-de-Seine</option>
+                    <option>93 Seine-Saint-Denis</option>
+                    <option>94 Val-de-Marne</option>
+                    <option>95 Val-d'Oise</option>
+                </select>
+            </div>
+            
+            <!-- Dropdown for sectors -->
+            <div class="relative group rounded-lg w-64 bg-gray-50 overflow-hidden before:absolute before:w-12 before:h-12 before:content-[''] before:right-0 before:bg-violet-500 before:rounded-full before:blur-lg before:[box-shadow:-60px_20px_10px_10px_#F9B0B9]">
+                <svg y="0" xmlns="http://www.w3.org/2000/svg" x="0" width="100" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" height="100" class="w-8 h-8 absolute right-0 -rotate-45 stroke-pink-300 top-1.5 group-hover:rotate-0 duration-300">
+                    <path stroke-width="4" stroke-linejoin="round" stroke-linecap="round" fill="none" d="M60.7,53.6,50,64.3m0,0L39.3,53.6M50,64.3V35.7m0,46.4A32.1,32.1,0,1,1,82.1,50,32.1,32.1,0,0,1,50,82.1Z" class="svg-stroke-primary"></path>
+                </svg>
+                <select class="appearance-none relative bg-transparent ring-0 outline-none border border-neutral-500 text-neutral-900 text-sm font-bold rounded-lg focus:ring-violet-500 focus:border-violet-500 block w-full p-2.5">
+                    <option>Tous les secteurs</option>
+                    <option>Bâtiments</option>
+                    <option>Second œuvre</option>
+                    <option>Construction métallique</option>
+                    <option>Corps d'état technique</option>
+                    <option>Ingénierie</option>
+                    <option>Activité connexe</option>
+                    <option>Industrie</option>
+                </select>
+            </div>
+            
+            <!-- "Tout afficher" button -->
+            <button class="btn-orange">
+                Tout afficher
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 py-6 mt-10">
+        <div class="container mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex flex-col md:flex-row">
+                <div class="flex items-center mb-4 md:mb-0 md:flex-col md:items-start">
+                    <div class="flex items-center">
+                        <img src="adresse.png" alt="Adresse" class="w-6 h-6 mr-2">
+                        <p>6 rue St John Perse - Immeuble ISIS<br>21000 Dijon, France</p>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <img src="tel.png" alt="Téléphone" class="w-6 h-6 mr-2">
+                        <p>03 80 53 19 14</p>
+                    </div>
+                </div>
+                <div class="flex items-center mb-4 md:mb-0 md:ml-8 md:flex-col md:items-start">
+                    <div class="flex items-center">
+                        <img src="adresse.png" alt="Adresse" class="w-6 h-6 mr-2">
+                        <p>58 Chemin de Mornata, Carrara<br>69570 Dardilly, France</p>
+                    </div>
+                    <div class="flex items-center mt-2">
+                        <img src="tel.png" alt="Téléphone" class="w-6 h-6 mr-2">
+                        <p>04 78 35 02 62</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/corhom/" target="_blank" class="footer-link bg-blue-600 text-white p-2 rounded-md hover:bg-blue-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.1em" viewBox="0 0 448 512" fill="currentColor" class="w-5 h-5">
+                        <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/company/corhom" target="_blank" class="footer-link bg-blue-700 text-white p-2 rounded-md hover:bg-blue-800 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.1em" viewBox="0 0 512 512" fill="currentColor" class="w-5 h-5">
+                        <path d="M444.17 32H70.28C49.85 32 32 46.7 32 66.89v374.72C32 461.91 49.85 480 70.28 480h373.78c20.54 0 35.94-18.21 35.94-38.39V66.89C480.12 46.7 464.6 32 444.17 32zm-273.3 373.43h-64.18V205.88h64.18zM141 175.54h-.46c-20.54 0-33.84-15.29-33.84-34.43 0-19.49 13.65-34.42 34.65-34.42s33.85 14.82 34.31 34.42c-.01 19.14-13.31 34.43-34.66 34.43zm264.43 229.89h-64.18V296.32c0-26.14-9.34-44-32.56-44-17.74 0-28.24 12-32.91 23.69-1.75 4.2-2.22 9.92-2.22 15.76v113.66h-64.18V205.88h64.18v27.77c9.34-13.3 23.93-32.44 57.88-32.44 42.13 0 74 27.77 74 87.64z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

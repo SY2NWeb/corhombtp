@@ -1,0 +1,496 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+}
+
+.header img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+.header nav {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.header nav a:hover {
+    color: #f90;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 300px; /* Adjusted height for banner */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.banner-text p {
+    font-size: 1.2em;
+}
+
+.banner-text button {
+    margin-top: 10px;
+    padding: 0.9em 1.4em;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg, hsla(35, 100%, 56%, 1) 0%, hsla(25, 100%, 69%, 1) 55%, hsla(35, 100%, 56%, 1) 90%);
+    border: none;
+    border-radius: 0.5em;
+    color: hsla(360, 100%, 100%, 1);
+    font-size: 1rem;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 0px 0px 20px rgba(255, 184, 71, 0.5), 0px 5px 5px -1px rgba(233, 125, 58, 0.25), inset 4px 4px 8px rgba(255, 230, 175, 0.5), inset -4px -4px 8px rgba(216, 95, 19, 0.35);
+}
+
+.banner-text button:hover {
+    background-position: right top;
+}
+
+.banner-text button:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(360, 100%, 100%, 1), 0 0 0 6px hsla(35, 100%, 56%, 1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%; /* Adjusted width to move cards closer */
+    margin-bottom: 40px;
+}
+
+.card {
+    overflow: visible;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* Added for 3D effect */
+    position: relative; /* Added for rotating border */
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 550ms;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border-radius: 5px;
+    position: relative; /* Added for rotating border */
+}
+
+.front, .back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 3px solid transparent; /* Added for border */
+}
+
+.front::before, .back::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    border: 3px solid transparent;
+    border-radius: 5px;
+    animation: rotating-border 2s linear infinite;
+    background-image: linear-gradient(90deg, transparent, transparent, #ff9966, transparent, transparent);
+    background-size: 200% 100%;
+    z-index: -1; /* Place it behind the card */
+}
+
+@keyframes rotating-border {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.back {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transform: rotateY(180deg);
+    position: relative; /* Added for line animation */
+}
+
+/* Ligne orange tournante */
+.back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+    animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    background-color: #151515;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.back-content .title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.back-content a {
+    color: #ff9966; /* Changed text color to orange */
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.back-content a:hover {
+    text-decoration: underline;
+}
+
+.front {
+    color: white;
+}
+
+.front-content, .back-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.front-content img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.front-content strong {
+    font-size: 1.5em;
+    color: white;
+}
+
+.text-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+    margin-top: -20px; /* Adjusted to position text under cards */
+}
+
+.text-box {
+    width: 30%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.text-box p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.text-box button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 0.9em 1.4em;
+    background-size: 280% auto;
+    background-image: linear-gradient(325deg, hsla(35, 100%, 56%, 1) 0%, hsla(25, 100%, 69%, 1) 55%, hsla(35, 100%, 56%, 1) 90%);
+    border: none;
+    border-radius: 0.5em;
+    color: hsla(360, 100%, 100%, 1);
+    font-size: 1rem;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 0px 0px 20px rgba(255, 184, 71, 0.5), 0px 5px 5px -1px rgba(233, 125, 58, 0.25), inset 4px 4px 8px rgba(255, 230, 175, 0.5), inset -4px -4px 8px rgba(216, 95, 19, 0.35);
+}
+
+.text-box button:hover {
+    background-position: right top;
+}
+
+.text-box button:is(:focus, :focus-visible, :active) {
+    outline: none;
+    box-shadow: 0 0 0 3px hsla(360, 100%, 100%, 1), 0 0 0 6px hsla(35, 100%, 56%, 1);
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #eee;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-address {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-address div {
+    width: 45%;
+    text-align: left;
+}
+
+.footer-address h3 {
+    margin-bottom: 5px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-buttons section {
+    display: inline-block;
+}
+
+.social-buttons a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-buttons a svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-note {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.social-buttons a span {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    white-space: nowrap;
+    background-color: #fff;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-buttons a:hover span {
+    opacity: 1;
+    bottom: 110%;
+}
+
+.text-3xl {
+    color: #FF9966;
+}
+
+.inputContainer {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.customInput {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #007bff;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #007bff;
+}
+
+.customInput:focus,
+.customInput:not(:placeholder-shown) {
+    border-color: #0056b3;
+}
+
+.inputLabel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    padding: 5px;
+    font-size: 16px;
+    color: #007bff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.customInput:focus + .inputLabel,
+.customInput:not(:placeholder-shown) + .inputLabel {
+    transform: translateY(-100%) translateX(-5px) scale(0.8);
+}
+
+.inputUnderline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+}
+
+.contact-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: darkorange;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: transparent; /* Make the modal content transparent */
+    border: none; /* Remove the border */
+    width: 80%; /* Adjust width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content .inner-content {
+    background-color: white; /* White background for inner content */
+    border: 2px solid orange; /* Orange border */
+    border-radius: 8px; /* Optional: add border radius */
+    padding: 20px; /* Optional: add padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: add shadow */
+}
+
+/* Optional: add some padding to the close button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
